@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La pastalee — Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>La Pasta <span>Bella</span></h1>
+        <p class="tag">Rasa Italia. Suasana lokal.</p>
+      </div>
+
+      <nav class="nav">
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#contact" class="nav-link cta">Reservasi</a>
+      </nav>
+
+      <button id="menuToggle" aria-label="Buka menu" class="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h2>Selamat datang di <strong>La Pasta Bella</strong></h2>
+          <p>Menyajikan aneka pasta otentik, saus rumah, dan bahan segar setiap hari.</p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#menu">Lihat Menu</a>
+            <button id="openGallery" class="btn-ghost">Galeri</button>
+          </div>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <!-- decorative plate with subtle motion -->
+          <div class="plate" id="plateAnim">
+            <img src="https://images.unsplash.com/photo-1603133872878-1a9c5a6c0f9b?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Pasta signature" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER + MENU GRID -->
+    <section id="menu" class="menu-section container">
+      <div class="section-head">
+        <h3>Menu Pasta Pilihan</h3>
+        <p>Pilih kategori atau klik kartu untuk melihat detail dan bahan.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">Semua</button>
+        <button class="filter" data-filter="red">Tomat</button>
+        <button class="filter" data-filter="creamy">Krim</button>
+        <button class="filter" data-filter="seafood">Seafood</button>
+        <input id="search" placeholder="Cari: Carbonara, Bolognese..." />
+      </div>
+
+      <div id="menuGrid" class="menu-grid">
+        <!-- Kartu menu (isi via HTML statis untuk contoh) -->
+        <article class="card" data-tags="red" data-name="Spaghetti Bolognese">
+          <div class="card-media"><img src="https://images.unsplash.com/photo-1601924638867-3ec56d8e17f9?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Spaghetti Bolognese" /></div>
+          <div class="card-body">
+            <h4 class="card-title">Spaghetti Bol
