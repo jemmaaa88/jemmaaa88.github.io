@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Osteria Nusantara — Restoran Pasta ala Italia</title>
+  <meta name="description" content="Osteria Nusantara - perpaduan cita rasa Italia dan nusantara. Menu pasta, pesan online & checkout mudah." />
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <h1>Osteria Nusantara</h1>
+      <p>Selamat datang, Jemalia Khairany</p>
+    </div>
+  </div>
+
+  <header class="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="#">Osteria <span>Nusantara</span></a>
+      <nav class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="soundToggle" class="icon">🔊</button>
+        <button id="cartBtn" class="cart">🛒 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="slider" id="slider">
+        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1600&auto=format&fit=crop')">
+          <div class="slide-caption container">
+            <h2>Rasa Italia, Sentuhan Nusantara</h2>
+            <p>Osteria Nusantara — pasta segar, saus tangan, dan suasana elegan.</p>
+            <a href="#menu" class="btn">Lihat Menu</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1512058564366-c9e3b0f3f6f5?q=80&w=1600&auto=format&fit=crop')">
+          <div class="slide-caption container">
+            <h2>Signature: Spaghetti Rendang</h2>
+            <p>Perpaduan unik bumbu nusantara dalam teknik pasta al dente.</p>
+            <a href="#menu" class="btn">Pesan Sekarang</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop')">
+          <div class="slide-caption container">
+            <h2>Suasana Cozy & Elegan</h2>
+            <p>Tempat nongkrong, tugas, dan berkumpul dengan vibes Italia.</p>
+            <a href="#about" class="btn">Tentang Kami</a>
+          </div>
+        </div>
+        <button id="prev" class="arrow left">‹</button>
+        <button id="next" class="arrow right">›</button>
+        <div id="dots" class="dots"></div>
+      </div>
+    </section>
+
+    <section class="highlights container">
+      <div class="h">🇮🇹 Otentik</div>
+      <div class="h">✨ Elegan</div>
+      <div class="h">🛵 Pesan & Ambil</div>
+    </section>
+
+    <section id="menu" class="menu container">
+      <div class="menu-head">
+        <h2>Menu Andalan</h2>
+        <div class="filters">
+          <button class="chip active" data-filter="all">Semua</button>
+          <button class="chip" data-filter="pasta">Pasta</button>
+          <button class="chip" data-filter="seafood">Seafood</button>
+          <button class="chip" data-filter="dessert">Dessert</button>
+        </div>
+      </div>
+      <div id="menuGrid" class="grid"></div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>Tentang Osteria Nusantara</h2>
+      <p>Osteria Nusantara adalah restoran pasta ala Italia berpadu sentuhan bumbu Nusantara. Dipimpin oleh Jemalia Khairany, kami menyajikan bahan segar dan suasana elegan.</p>
+      <ul>
+        <li>Jam: 10.00 - 22.00</li>
+        <li>Live music akustik setiap Jumat</li>
+        <li>Menu andalan: Spaghetti Rendang, Pesto Sambal Matah</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container foot">
+      <div>
+        <h3>Osteria Nusantara</h3>
+        <p>Jemalia Khairany — Pemilik</p>
+        <p>Jl. Rasa Italia No.7 • Kota Kamu</p>
+      </div>
+      <div>
+        <form id="newsletter">
+          <label>Berlangganan Promo</label>
+          <div class="input-row">
+            <input id="email" type="email" placeholder="Email kamu" required>
+            <button class="btn small">Langganan</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <button id="openCheckout" class="btn outline">Checkout</button>
+        <p class="muted">© 2025 Osteria Nusantara</p>
+      </div>
+    </div>
+  </footer>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Keranjang</h3>
+      <button id="closeCart" class="icon">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <div class="line"><span>Subtotal</span><strong id="subtotal">Rp 0</strong></div>
+      <div class="line"><span>Pajak (10%)</span><strong id="tax">Rp 0</strong></div>
+      <div class="line total"><span>Total</span><strong id="total">Rp 0</strong></div>
+      <button id="checkoutBtn" class="btn primary full">Checkout</button>
+    </div>
+  </aside>
+
+  <div id="checkoutModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button id="closeCheckout" class="icon close">✕</button>
+      <h3>Selesaikan Pesanan</h3>
+      <form id="checkoutForm" class="checkout-form">
+        <input name="name" type="text" placeholder="Nama lengkap" required>
+        <input name="phone" type="tel" placeholder="08xx xxxx xxxx" required>
+        <select name="payment" required>
+          <option value="qris">QRIS</option>
+          <option value="transfer">Transfer</option>
+          <option value="cash">Tunai</option>
+        </select>
+        <div class="summary">
+          <p>Item: <span id="summaryCount">0</span></p>
+          <p>Total: <strong id="summaryTotal">Rp 0</strong></p>
+        </div>
+        <button class="btn primary full" type="submit">Bayar Sekarang</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
