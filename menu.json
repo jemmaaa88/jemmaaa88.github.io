@@ -1,0 +1,8 @@
+
+[
+  {"id":"spag1","name":"Spaghetti Rendang","desc":"Spaghetti al dente dengan saus rendang khas Nusantara.","price":65000,"type":"pasta","img":"assets/images/spaghetti.png"},
+  {"id":"pesto","name":"Pesto Sambal Matah","desc":"Pasta dengan sentuhan sambal matah Bali.","price":58000,"type":"pasta","img":"assets/images/pesto.png"},
+  {"id":"sea1","name":"Linguine Seafood","desc":"Linguine segar dengan campuran seafood lokal.","price":72000,"type":"seafood","img":"assets/images/linguine.png"},
+  {"id":"cake","name":"Tiramisu Nusantara","desc":"Tiramisu lembut dengan sentuhan kopi lokal.","price":45000,"type":"dessert","img":"assets/images/tiramisu.png"},
+  {"id":"brus","name":"Bruschetta","desc":"Roti panggang topping tomat dan basil.","price":32000,"type":"dessert","img":"assets/images/bruschetta.png"}
+]
